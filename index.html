@@ -1,0 +1,2039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosiru Micheal · Web Developer & Wix Expert</title>
+    <meta name="description" content="Nosiru Micheal is a Web Developer, Webflow Developer, Certified Wix Expert, SEO Specialist, and AI Automation Specialist building high-converting websites." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nosiru Micheal · Web Developer & Wix Expert" />
+    <meta property="og:description" content="Building Websites That Turn Visitors Into Customers." />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nosiru Micheal · Web Developer & Wix Expert" />
+    <meta name="twitter:description" content="Building Websites That Turn Visitors Into Customers." />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        /* =========================================================
+                   CSS RESET & BASE
+                ========================================================= */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #07131F;
+            --bg-card: #101C2B;
+            --primary: #2563EB;
+            --accent: #06B6D4;
+            --text-white: #FFFFFF;
+            --text-muted: #B9C4D3;
+            --glass-bg: rgba(16, 28, 43, 0.55);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --shadow-glow: 0 20px 60px rgba(37, 99, 235, 0.15);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+            --transition: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* =========================================================
+                   UTILITY
+                ========================================================= */
+        .section-label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            background: rgba(6, 182, 212, 0.12);
+            padding: 0.3rem 1rem;
+            border-radius: 100px;
+            border: 1px solid rgba(6, 182, 212, 0.15);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            line-height: 1.15;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-sub {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 560px;
+        }
+
+        .motif-line {
+            width: 56px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 4px;
+            margin: 0.75rem 0 1.25rem 0;
+        }
+
+        .motif-line-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================================================
+                   GLASS CARD
+                ========================================================= */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+        }
+
+        /* =========================================================
+                   BUTTONS
+                ========================================================= */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all var(--transition);
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 24px rgba(37, 99, 235, 0.35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(37, 99, 235, 0.45);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 1.5px solid rgba(255, 255, 255, 0.15);
+        }
+        .btn-outline:hover {
+            border-color: var(--primary);
+            background: rgba(37, 99, 235, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1.5px solid transparent;
+        }
+        .btn-ghost:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: #07131F;
+            font-weight: 700;
+        }
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(6, 182, 212, 0.35);
+        }
+
+        /* =========================================================
+                   STICKY NAV
+                ========================================================= */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 0.8rem 0;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(7, 19, 31, 0.82);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: white;
+        }
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.2rem;
+            list-style: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            transition: color 0.25s;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+        .nav-links a:hover {
+            color: white;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 1.4rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all var(--transition);
+            border: none;
+        }
+        .nav-cta:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2.5px;
+            background: white;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* =========================================================
+                   HERO
+                ========================================================= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 7rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 60%;
+            height: 80%;
+            background: radial-gradient(ellipse, rgba(37, 99, 235, 0.10), transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            flex: 1 1 48%;
+        }
+
+        .hero-content .eyebrow {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: rgba(6, 182, 212, 0.10);
+            padding: 0.3rem 1.2rem;
+            border-radius: 100px;
+            border: 1px solid rgba(6, 182, 212, 0.12);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.08;
+            margin-bottom: 1rem;
+        }
+        .hero-content h1 .highlight {
+            color: var(--primary);
+        }
+
+        .hero-content .subhead {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            line-height: 1.8;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0 1.8rem;
+        }
+        .hero-stats .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stats .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+        }
+        .hero-stats .stat-number .plus {
+            color: var(--primary);
+            font-size: 1.6rem;
+        }
+        .hero-stats .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            flex: 1 1 32%;
+            min-width: 240px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1/1;
+            border-radius: 30px 30px 30px 8px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.06);
+            box-shadow: var(--shadow-glow), 0 0 80px rgba(37, 99, 235, 0.08);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image .image-wrapper::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 32px 32px 32px 10px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--accent), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero-image .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .hero-image .image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .hero-image .glow-ring {
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.10), transparent 70%);
+            z-index: -1;
+            animation: pulse-ring 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        @keyframes pulse-ring {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.08);
+                opacity: 0.3;
+            }
+        }
+
+        /* =========================================================
+                   TRUST BAR
+                ========================================================= */
+        .trust-bar {
+            padding: 2.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .trust-bar .trust-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem 3rem;
+            align-items: center;
+        }
+        .trust-bar .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+        }
+        .trust-bar .trust-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* =========================================================
+                   SECTIONS
+                ========================================================= */
+        section {
+            padding: 5rem 0;
+        }
+
+        /* =========================================================
+                   WHY WORK WITH ME
+                ========================================================= */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(37, 99, 235, 0.15);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-card .icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+                   SERVICES
+                ========================================================= */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            padding: 1.8rem 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(37, 99, 235, 0.15);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card .icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .service-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-card p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* =========================================================
+                   PORTFOLIO (BROWSER CARDS)
+                ========================================================= */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(37, 99, 235, 0.15);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Browser chrome */
+        .project-card .browser-bar {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.6rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            flex-shrink: 0;
+        }
+
+        .project-card .browser-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #3a4a5e;
+        }
+        .project-card .browser-dot:nth-child(1) {
+            background: #f15e5e;
+        }
+        .project-card .browser-dot:nth-child(2) {
+            background: #f5bd4a;
+        }
+        .project-card .browser-dot:nth-child(3) {
+            background: #5ac05a;
+        }
+
+        .project-card .browser-url {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            margin-left: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+        }
+
+        /* Preview image */
+        .project-card .project-preview {
+            width: 100%;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            position: relative;
+            background: #0a1a2a;
+            flex-shrink: 0;
+        }
+
+        .project-card .project-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .project-card:hover .project-preview img {
+            transform: scale(1.04);
+        }
+
+        .project-card .project-preview .concept-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(6, 182, 212, 0.15);
+            backdrop-filter: blur(8px);
+            color: var(--accent);
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.2rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(6, 182, 212, 0.15);
+        }
+
+        /* Details */
+        .project-card .project-details {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .project-card .project-details h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .project-card .project-details p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .project-card .project-details .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin: 0.3rem 0 0.6rem;
+        }
+
+        .project-card .project-details .tech-tags span {
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 0.15rem 0.8rem;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .project-card .project-details .project-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .project-card .project-details .project-links .btn {
+            padding: 0.4rem 1.2rem;
+            font-size: 0.78rem;
+            border-radius: 100px;
+        }
+
+        /* =========================================================
+                   TESTIMONIALS
+                ========================================================= */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(37, 99, 235, 0.10);
+        }
+
+        .testimonial-card .stars {
+            color: #f5bd4a;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+        }
+
+        .testimonial-card blockquote {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-card .author {
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .testimonial-card .author span {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .testimonial-card .example-note {
+            margin-top: 0.5rem;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            opacity: 0.5;
+            letter-spacing: 0.04em;
+        }
+
+        /* =========================================================
+                   ABOUT
+                ========================================================= */
+        .about-wrap {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .about-image {
+            flex: 1 1 200px;
+            max-width: 280px;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 30px 30px 30px 8px;
+            border: 3px solid rgba(255, 255, 255, 0.06);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            right: -12px;
+            width: 90%;
+            height: 90%;
+            border-radius: 30px 30px 30px 8px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            opacity: 0.08;
+            z-index: -1;
+        }
+
+        .about-content {
+            flex: 2;
+        }
+
+        .about-content .bio {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+        }
+
+        .about-content .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1rem 0;
+        }
+
+        .about-content .badge-group .badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--accent);
+            background: rgba(6, 182, 212, 0.08);
+            padding: 0.25rem 1rem;
+            border-radius: 100px;
+            border: 1px solid rgba(6, 182, 212, 0.08);
+        }
+
+        /* =========================================================
+                   FAQ (Accordion)
+                ========================================================= */
+        .faq-list {
+            max-width: 760px;
+            margin: 2rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(37, 99, 235, 0.10);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.25s;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-question .icon {
+            font-size: 1.2rem;
+            transition: transform 0.4s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-question .icon {
+            transform: rotate(180deg);
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* =========================================================
+                   CONTACT CTA
+                ========================================================= */
+        .cta-section {
+            background: linear-gradient(145deg, rgba(16, 28, 43, 0.6), rgba(7, 19, 31, 0.8));
+            border-radius: var(--radius-lg);
+            padding: 4rem 3rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(37, 99, 235, 0.06), transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-section h2 {
+            font-size: 2.4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            max-width: 480px;
+            margin: 0.5rem auto 1.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* =========================================================
+                   FOOTER
+                ========================================================= */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding: 2.5rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .footer-logo span {
+            color: var(--primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            transition: color 0.25s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-links .social-icon {
+            font-size: 1.1rem;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            opacity: 0.6;
+        }
+
+        /* =========================================================
+                   RESPONSIVE
+                ========================================================= */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+                padding: 1.5rem 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.04);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 6rem 0 2rem;
+            }
+
+            .hero-grid {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-content .subhead {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image .image-wrapper {
+                max-width: 260px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+                max-width: 460px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                max-width: 460px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-wrap {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-content .badge-group {
+                justify-content: center;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+                max-width: 460px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-image .image-wrapper {
+                max-width: 200px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-stats {
+                gap: 1.2rem;
+            }
+            .hero-stats .stat-number {
+                font-size: 1.6rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* =========================================================
+                   REVEAL ANIMATIONS
+                ========================================================= */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero stagger children */
+        .hero-content .stagger-item {
+            opacity: 0;
+            transform: translateY(24px);
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-content .stagger-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+        .hero-content .stagger-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .hero-content .stagger-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+        .hero-content .stagger-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+        .hero-content .stagger-item:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .hero-image .image-wrapper {
+                animation: none;
+            }
+            .hero-image .glow-ring {
+                animation: none;
+            }
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .hero-content .stagger-item {
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+            }
+        }
+
+        /* Mouse glow */
+        .mouse-glow {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.04), transparent 70%);
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .mouse-glow.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mouse Glow -->
+    <div class="mouse-glow" id="mouseGlow"></div>
+
+    <!-- =========================================================
+    NAVIGATION
+    ========================================================= -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-inner">
+            <a href="#" class="logo" aria-label="Nosiru Micheal Home">NM<span>.</span></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#work" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+                <li role="none"><a href="#contact" role="menuitem" class="nav-cta">Book a Call</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- =========================================================
+    HERO
+    ========================================================= -->
+    <section class="hero" id="home" aria-label="Hero introduction">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="eyebrow stagger-item">Certified Wix Expert • 4+ Years Experience</div>
+                <h1 class="stagger-item">Building Websites That <span class="highlight">Turn Visitors Into Customers.</span></h1>
+                <p class="subhead stagger-item">
+                    I'm Nosiru Micheal, a Web Developer, Webflow Developer, Certified Wix Expert, SEO Specialist, and AI Automation Specialist. I build fast, modern, high-converting websites and intelligent automation systems that help businesses grow online.
+                </p>
+                <div class="hero-stats stagger-item">
+                    <div class="stat-item">
+                        <span class="stat-number"><span class="count" data-target="4">0</span><span class="plus">+</span></span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><span class="count" data-target="100">0</span><span class="plus">+</span></span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><span class="count" data-target="98">0</span><span class="plus">%</span></span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                </div>
+                <div class="hero-buttons stagger-item">
+                    <a href="mailto:nosirumichael291@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="#work" class="btn btn-outline">
+                        <i class="fas fa-folder-open"></i> View Projects
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+                        <i class="fab fa-upwork"></i> Upwork
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="glow-ring"></div>
+                <div class="image-wrapper">
+                    <img src="https://i.ibb.co/RG2ZxN3d/Chat-GPT-Image-Jul-27-2026-03-05-38-PM.png" alt="Nosiru Micheal — Web Developer and Wix Expert" width="400" height="400" loading="eager" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    TRUST BAR
+    ========================================================= -->
+    <div class="trust-bar" aria-label="Trusted technologies and expertise">
+        <div class="container">
+            <div class="trust-grid">
+                <span class="trust-item"><i class="fab fa-webflow"></i> Webflow</span>
+                <span class="trust-item"><i class="fas fa-cube"></i> Wix Studio</span>
+                <span class="trust-item"><i class="fab fa-wordpress"></i> WordPress</span>
+                <span class="trust-item"><i class="fas fa-chart-line"></i> SEO</span>
+                <span class="trust-item"><i class="fas fa-robot"></i> AI Automation</span>
+                <span class="trust-item"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                <span class="trust-item"><i class="fas fa-tachometer-alt"></i> Performance</span>
+                <span class="trust-item"><i class="fas fa-database"></i> CMS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+    WHY WORK WITH ME
+    ========================================================= -->
+    <section id="why" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">Why Work With Me</span>
+            <h2 class="section-title">Strategy, Performance, Conversion</h2>
+            <div class="motif-line motif-line-center"></div>
+        </div>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="icon"><i class="fas fa-bullseye"></i></span>
+                <h3>Strategy First</h3>
+                <p>I don't just design websites—I create digital experiences aligned with your business goals and user needs.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon"><i class="fas fa-rocket"></i></span>
+                <h3>Performance Focused</h3>
+                <p>Fast loading, responsive, SEO-friendly websites that perform flawlessly on every device and browser.</p>
+            </div>
+            <div class="why-card">
+                <span class="icon"><i class="fas fa-exchange-alt"></i></span>
+                <h3>Built To Convert</h3>
+                <p>Every section is designed to generate more leads and convert visitors into loyal customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    SERVICES
+    ========================================================= -->
+    <section id="services" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">What I Do</span>
+            <h2 class="section-title">Services</h2>
+            <div class="motif-line motif-line-center"></div>
+        </div>
+        <div class="services-grid">
+            <!-- Web Design -->
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-paint-brush"></i></span>
+                <h4>Website Design</h4>
+                <p>Beautiful, modern designs tailored to your brand.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-sync-alt"></i></span>
+                <h4>Website Redesign</h4>
+                <p>Transform outdated sites into modern, high-performing platforms.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-landmark"></i></span>
+                <h4>Landing Pages</h4>
+                <p>Conversion-optimized landing pages that drive results.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-store"></i></span>
+                <h4>E-commerce Stores</h4>
+                <p>Full-featured online stores with seamless checkout.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fab fa-webflow"></i></span>
+                <h4>Webflow Development</h4>
+                <p>Custom Webflow sites with CMS and animations.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-cube"></i></span>
+                <h4>Wix Studio</h4>
+                <p>Certified Wix Expert — custom Wix development.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fab fa-wordpress"></i></span>
+                <h4>WordPress</h4>
+                <p>Custom WordPress themes and plugins.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-search"></i></span>
+                <h4>SEO Optimization</h4>
+                <p>Technical SEO, on-page optimization, and speed tuning.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                <h4>Responsive Design</h4>
+                <p>Flawless experience on every screen size.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-code"></i></span>
+                <h4>Figma to Website</h4>
+                <p>Pixel-perfect conversion from design to code.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-robot"></i></span>
+                <h4>AI Automation</h4>
+                <p>ChatGPT, OpenAI, n8n, Zapier, Make.com integrations.</p>
+            </div>
+            <div class="service-card">
+                <span class="icon"><i class="fas fa-server"></i></span>
+                <h4>Website Maintenance</h4>
+                <p>Ongoing support, updates, and hosting management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    PORTFOLIO
+    ========================================================= -->
+    <section id="work" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">Selected Work</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="motif-line motif-line-center"></div>
+        </div>
+        <div class="portfolio-grid">
+
+            <!-- Mikel Marvel Realty -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">mikel-marvel-realty1.vercel.app</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=center" alt="Mikel Marvel Realty website preview" loading="lazy" />
+                </div>
+                <div class="project-details">
+                    <h3>Mikel Marvel Realty</h3>
+                    <p>Modern real estate platform with property listings, agent profiles, and lead generation.</p>
+                    <div class="tech-tags">
+                        <span>Webflow</span>
+                        <span>CMS</span>
+                        <span>SEO</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mikel-marvel-realty1.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fas fa-external-link-alt"></i> Live
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FarmBridge -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">farmbridgeio.vercel.app</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c1c?w=600&h=400&fit=crop&crop=center" alt="FarmBridge website preview" loading="lazy" />
+                </div>
+                <div class="project-details">
+                    <h3>FarmBridge</h3>
+                    <p>Agricultural platform connecting farmers with markets, featuring real-time data and analytics.</p>
+                    <div class="tech-tags">
+                        <span>Wix</span>
+                        <span>AI Automation</span>
+                        <span>API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://farmbridgeio.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fas fa-external-link-alt"></i> Live
+                        </a>
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concept: Restaurant -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">concept · restaurant</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=center" alt="Restaurant website concept preview" loading="lazy" />
+                    <span class="concept-badge">Concept</span>
+                </div>
+                <div class="project-details">
+                    <h3>Restaurant Website</h3>
+                    <p>Elegant dining experience with online ordering, reservations, and dynamic menus.</p>
+                    <div class="tech-tags">
+                        <span>Webflow</span>
+                        <span>CMS</span>
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concept: AI SaaS -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">concept · AI SaaS</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center" alt="AI SaaS dashboard concept preview" loading="lazy" />
+                    <span class="concept-badge">Concept</span>
+                </div>
+                <div class="project-details">
+                    <h3>AI SaaS Dashboard</h3>
+                    <p>Modern SaaS platform with AI-powered analytics, user management, and real-time insights.</p>
+                    <div class="tech-tags">
+                        <span>Wix</span>
+                        <span>AI</span>
+                        <span>Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concept: Real Estate Landing -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">concept · real estate</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop&crop=center" alt="Real estate landing page concept preview" loading="lazy" />
+                    <span class="concept-badge">Concept</span>
+                </div>
+                <div class="project-details">
+                    <h3>Real Estate Landing Page</h3>
+                    <p>High-converting landing page for luxury properties with virtual tours and lead capture.</p>
+                    <div class="tech-tags">
+                        <span>Webflow</span>
+                        <span>SEO</span>
+                        <span>Performance</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concept: Creative Agency -->
+            <div class="project-card">
+                <div class="browser-bar">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">concept · agency</span>
+                </div>
+                <div class="project-preview">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=center" alt="Creative agency website concept preview" loading="lazy" />
+                    <span class="concept-badge">Concept</span>
+                </div>
+                <div class="project-details">
+                    <h3>Creative Agency Website</h3>
+                    <p>Portfolio-driven agency site with case studies, team profiles, and client showcase.</p>
+                    <div class="tech-tags">
+                        <span>Wix</span>
+                        <span>CMS</span>
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding:0.3rem 1.2rem; font-size:0.75rem;">
+                            <i class="fab fa-upwork"></i> Hire Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================
+    TESTIMONIALS
+    ========================================================= -->
+    <section id="testimonials" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">Client Feedback</span>
+            <h2 class="section-title">Example Testimonials</h2>
+            <div class="motif-line motif-line-center"></div>
+            <p class="section-sub mx-auto" style="max-width:500px;">Real feedback from real clients — these are example testimonials until replaced with yours.</p>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Nosiru transformed our website into a modern, high-performing platform. Communication was excellent, and the final result exceeded our expectations."</blockquote>
+                <div class="author">Sarah Mitchell <span>· Marketing Director</span></div>
+                <div class="example-note">★ Example testimonial</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"The automation workflow he built saved our team hours every week. Professional, reliable, and highly recommended."</blockquote>
+                <div class="author">Michael Johnson <span>· Operations Manager</span></div>
+                <div class="example-note">★ Example testimonial</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <blockquote>"Our new Webflow website is beautiful, responsive, and much easier to manage. A true expert."</blockquote>
+                <div class="author">Emma Carter <span>· Founder</span></div>
+                <div class="example-note">★ Example testimonial</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    ABOUT
+    ========================================================= -->
+    <section id="about" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Nosiru Micheal</h2>
+            <div class="motif-line motif-line-center"></div>
+        </div>
+        <div class="about-wrap">
+            <div class="about-image">
+                <img src="https://i.ibb.co/RG2ZxN3d/Chat-GPT-Image-Jul-27-2026-03-05-38-PM.png" alt="Nosiru Micheal — Web Developer and Wix Expert" loading="lazy" />
+            </div>
+            <div class="about-content">
+                <p class="bio">
+                    I'm a <strong>Web Developer</strong>, <strong>Webflow Developer</strong>, and <strong>Certified Wix Expert</strong> with over 4 years of experience helping businesses build modern, high-performing websites and intelligent automation solutions. My approach combines strategic design, technical expertise, and a deep understanding of user behavior to create digital experiences that drive real results.
+                </p>
+                <p class="bio">
+                    Whether it's a full website redesign, SEO optimization, or AI-powered automation, I focus on delivering work that's fast, reliable, and built to scale. I believe in clear communication, transparency, and going beyond expectations.
+                </p>
+                <div class="badge-group">
+                    <span class="badge">⭐ Wix Certified</span>
+                    <span class="badge">⚡ Webflow Developer</span>
+                    <span class="badge">🤖 AI Automation Specialist</span>
+                    <span class="badge">📈 SEO Specialist</span>
+                    <span class="badge">🏆 4+ Years Experience</span>
+                </div>
+                <div style="display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:0.5rem;">
+                    <a href="mailto:nosirumichael291@gmail.com" class="btn btn-primary" style="padding:0.5rem 1.5rem; font-size:0.85rem;">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:0.5rem 1.5rem; font-size:0.85rem;">
+                        <i class="fab fa-upwork"></i> Upwork
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    FAQ
+    ========================================================= -->
+    <section id="faq" class="container reveal">
+        <div class="text-center">
+            <span class="section-label">Questions</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="motif-line motif-line-center"></div>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item active">
+                <button class="faq-question" aria-expanded="true">
+                    How long does a website take?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Most websites take 2–6 weeks depending on complexity. I work efficiently without sacrificing quality, and I keep you updated throughout the process.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you redesign existing websites?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Absolutely. I specialize in redesigning outdated websites to be modern, fast, and conversion-focused while preserving your brand identity.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Can you improve my SEO?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. I implement technical SEO, optimize page speed, structure content properly, and ensure your site is search-engine friendly from the ground up.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Do you provide ongoing support?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. I offer maintenance packages including updates, backups, security monitoring, and content changes to keep your site running smoothly.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Can you build AI automation workflows?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes. I specialize in AI automation using tools like ChatGPT, OpenAI, n8n, Zapier, and Make.com to streamline your business processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    CONTACT CTA
+    ========================================================= -->
+    <section id="contact" class="container reveal">
+        <div class="cta-section">
+            <h2>Ready to Build Something Amazing?</h2>
+            <p>Let's create a modern website that grows your business and helps you stand out online.</p>
+            <div class="btn-group">
+                <a href="mailto:nosirumichael291@gmail.com" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer" class="btn btn-accent">
+                    <i class="fab fa-upwork"></i> View Upwork Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+    FOOTER
+    ========================================================= -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-logo">NM<span>.</span></div>
+            <div class="footer-links">
+                <a href="mailto:nosirumichael291@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-upwork"></i> Upwork
+                </a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <span class="footer-copy">© 2026 Nosiru Micheal</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+    SCRIPT
+    ========================================================= -->
+    <script>
+        (function() {
+            'use strict';
+
+            // =========================================================
+            // MOUSE GLOW
+            // =========================================================
+            const glow = document.getElementById('mouseGlow');
+            let glowActive = false;
+
+            document.addEventListener('mousemove', (e) => {
+                if (!glowActive) {
+                    glow.classList.add('active');
+                    glowActive = true;
+                }
+                glow.style.left = e.clientX + 'px';
+                glow.style.top = e.clientY + 'px';
+            });
+
+            document.addEventListener('mouseleave', () => {
+                glow.classList.remove('active');
+                glowActive = false;
+            });
+
+            // =========================================================
+            // NAVBAR SCROLL
+            // =========================================================
+            const navbar = document.getElementById('navbar');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                if (currentScroll > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                lastScroll = currentScroll;
+            });
+
+            // =========================================================
+            // HAMBURGER
+            // =========================================================
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('open');
+                const expanded = navLinks.classList.contains('open');
+                hamburger.setAttribute('aria-expanded', expanded);
+            });
+
+            // Close mobile menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // =========================================================
+            // FAQ ACCORDION
+            // =========================================================
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const button = item.querySelector('.faq-question');
+                button.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    // Toggle current
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+
+            // =========================================================
+            // SCROLL REVEAL (Intersection Observer)
+            // =========================================================
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // =========================================================
+            // COUNT-UP ANIMATION
+            // =========================================================
+            const counts = document.querySelectorAll('.count');
+            let counted = false;
+
+            const countObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !counted) {
+                        counted = true;
+                        counts.forEach(el => {
+                            const target = parseInt(el.getAttribute('data-target'), 10);
+                            let current = 0;
+                            const increment = Math.ceil(target / 40);
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    el.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    el.textContent = current;
+                                }
+                            }, 25);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            if (counts.length) {
+                const statsContainer = counts[0].closest('.hero-stats');
+                if (statsContainer) countObserver.observe(statsContainer);
+            }
+
+            // If reduced motion, just show final numbers
+            const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                counts.forEach(el => {
+                    el.textContent = el.getAttribute('data-target');
+                });
+            }
+
+        })();
+    </script>
+</body>
+</html>
