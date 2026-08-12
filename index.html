@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
     :root {
@@ -117,8 +118,11 @@
 
     /* TRUST */
     .trust { border-block:1px solid var(--line); background:rgba(255,255,255,.025); }
-    .trust-row { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; padding:24px 0; }
-    .trust-item { color:#aebdcd; font-size:.85rem; font-weight:700; padding:9px 13px; }
+    .trust-row { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; padding:28px 0; }
+    .trust-item { display:inline-flex; align-items:center; gap:9px; color:#c5d1df; font-size:.84rem; font-weight:700; padding:11px 15px; border:1px solid var(--line); border-radius:13px; background:rgba(255,255,255,.035); transition:.25s ease; }
+    .trust-item i { font-size:1.2rem; color:#dce8f5; transition:.25s ease; }
+    .trust-item:hover { transform:translateY(-4px); border-color:rgba(96,165,250,.35); background:rgba(255,255,255,.065); box-shadow:0 12px 30px rgba(0,0,0,.15); }
+    .trust-item:hover i { transform:scale(1.12); color:#7dd3fc; }
 
     /* PROBLEM */
     .problem-grid,.services-grid,.projects-grid,.why-grid,.testimonials,.process { display:grid; gap:18px; }
@@ -305,10 +309,14 @@
 
   <section class="trust">
     <div class="container trust-row">
-      <span class="trust-item">Webflow</span><span class="trust-item">Wix Studio</span>
-      <span class="trust-item">WordPress</span><span class="trust-item">SEO</span>
-      <span class="trust-item">AI Automation</span><span class="trust-item">JavaScript</span>
-      <span class="trust-item">Responsive Design</span><span class="trust-item">Performance</span>
+      <span class="trust-item"><i class="devicon-webflow-original"></i>Webflow</span>
+      <span class="trust-item"><i class="fa-solid fa-layer-group"></i>Wix Studio</span>
+      <span class="trust-item"><i class="devicon-wordpress-plain"></i>WordPress</span>
+      <span class="trust-item"><i class="fa-solid fa-magnifying-glass-chart"></i>SEO</span>
+      <span class="trust-item"><i class="fa-solid fa-wand-magic-sparkles"></i>AI Automation</span>
+      <span class="trust-item"><i class="devicon-javascript-plain"></i>JavaScript</span>
+      <span class="trust-item"><i class="fa-solid fa-mobile-screen-button"></i>Responsive Design</span>
+      <span class="trust-item"><i class="fa-solid fa-gauge-high"></i>Performance</span>
     </div>
   </section>
 
