@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
-    /* --- CSS (same as before, with adjustments for smaller images) --- */
+    /* --- CSS (same as before) --- */
     :root {
       --bg: #0a0a0f;
       --bg-secondary: #111118;
@@ -167,6 +167,16 @@
     }
     .btn-sm { padding: 10px 20px; font-size: 0.8rem; }
     .btn-block { width: 100%; justify-content: center; }
+    /* WhatsApp specific button */
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.45);
+    }
 
     /* NAV */
     .nav-wrap {
@@ -344,15 +354,14 @@
     .hero-visual {
       position: relative;
     }
-    /* --- Image size reduced --- */
     .hero-image-wrap {
       position: relative;
       border-radius: var(--radius);
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--surface);
-      max-width: 380px; /* Limit max width */
-      margin: 0 auto;   /* Center it */
+      max-width: 380px;
+      margin: 0 auto;
     }
     .hero-image-wrap img {
       width: 100%;
@@ -365,7 +374,7 @@
     .hero-float-card {
       position: absolute;
       bottom: -20px;
-      left: -20px; /* Adjust position to match smaller image */
+      left: -20px;
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
@@ -621,13 +630,12 @@
       gap: 60px;
       align-items: center;
     }
-    /* --- About image size reduced --- */
     .about-image {
       border-radius: var(--radius);
       border: 1px solid var(--line);
       overflow: hidden;
       background: var(--surface);
-      max-width: 320px; /* Limit max width */
+      max-width: 320px;
     }
     .about-image img {
       width: 100%;
@@ -717,6 +725,11 @@
       font-size: 1rem;
       flex-shrink: 0;
     }
+    .contact-info .contact-link .fiverr-svg {
+      width: 24px;
+      height: 24px;
+      fill: #1dbf73;
+    }
     .contact-form .field { margin-bottom: 16px; }
     .contact-form label {
       display: block;
@@ -782,6 +795,11 @@
       color: var(--text);
       transform: translateY(-3px);
     }
+    .footer-socials a .fiverr-svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
 
     /* FLOATING BUTTON */
     .floating-btn {
@@ -791,12 +809,12 @@
       z-index: 50;
       padding: 14px 22px;
       border-radius: 100px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      background: linear-gradient(135deg, #25D366, #128C7E);
       color: white;
       border: none;
       font-weight: 600;
       font-size: 0.85rem;
-      box-shadow: 0 8px 32px rgba(108,92,231,0.35);
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.35);
       cursor: pointer;
       transition: 0.3s;
       display: flex;
@@ -805,7 +823,7 @@
     }
     .floating-btn:hover {
       transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 12px 48px rgba(108,92,231,0.5);
+      box-shadow: 0 12px 48px rgba(37, 211, 102, 0.5);
     }
 
     /* REVEAL */
@@ -916,7 +934,9 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
-      <a class="btn btn-primary nav-cta btn-sm" href="#contact">Book a Call</a>
+      <a class="btn btn-whatsapp nav-cta btn-sm" href="https://wa.me/2349071049271" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Book Now
+      </a>
       <button class="menu" id="menuBtn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
     </nav>
   </div>
@@ -933,7 +953,9 @@
         <h1>Websites that <span class="gradient-text">carry your business</span> further.</h1>
         <p class="hero-copy">I'm Nosiru Micheal — Web Developer, Certified Wix Expert, Webflow Developer, SEO Specialist and AI Automation Specialist. I build modern digital experiences that help businesses grow.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact"><i class="fa-regular fa-envelope"></i> Get a Free Audit</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/2349071049271" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
           <a class="btn btn-secondary" href="#projects"><i class="fa-solid fa-arrow-down"></i> See My Work</a>
           <a class="btn btn-secondary" href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank"><i class="fa-brands fa-upwork"></i> Hire on Upwork</a>
         </div>
@@ -1017,7 +1039,9 @@
             <li><i class="fa-solid fa-check"></i> Mobile-first responsive</li>
             <li><i class="fa-solid fa-check"></i> Up to 3 revision rounds</li>
           </ul>
-          <a class="btn btn-primary btn-block btn-sm" href="#contact">Let's Talk</a>
+          <a class="btn btn-whatsapp btn-block btn-sm" href="https://wa.me/2349071049271" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
         </article>
 
         <article class="card service-card reveal">
@@ -1030,7 +1054,9 @@
             <li><i class="fa-solid fa-check"></i> 3-6 pages</li>
             <li><i class="fa-solid fa-check"></i> Contact form + basic SEO</li>
           </ul>
-          <a class="btn btn-primary btn-block btn-sm" href="#contact">Let's Talk</a>
+          <a class="btn btn-whatsapp btn-block btn-sm" href="https://wa.me/2349071049271" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
         </article>
 
         <article class="card service-card reveal">
@@ -1043,7 +1069,9 @@
             <li><i class="fa-solid fa-check"></i> Mobile-first responsive</li>
             <li><i class="fa-solid fa-check"></i> Basic SEO setup</li>
           </ul>
-          <a class="btn btn-primary btn-block btn-sm" href="#contact">Let's Talk</a>
+          <a class="btn btn-whatsapp btn-block btn-sm" href="https://wa.me/2349071049271" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
         </article>
 
         <article class="card service-card reveal">
@@ -1056,7 +1084,9 @@
             <li><i class="fa-solid fa-check"></i> OpenAI integration</li>
             <li><i class="fa-solid fa-check"></i> CRM & API connections</li>
           </ul>
-          <a class="btn btn-primary btn-block btn-sm" href="#contact">Let's Talk</a>
+          <a class="btn btn-whatsapp btn-block btn-sm" href="https://wa.me/2349071049271" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
         </article>
       </div>
     </div>
@@ -1100,7 +1130,9 @@
           <div class="step-number" style="color: var(--primary-light);">→</div>
           <h4>Ready to start?</h4>
           <p>Book a free consultation and let's get your project moving.</p>
-          <a class="btn btn-primary btn-sm" href="#contact" style="margin-top: 12px;">Get Started</a>
+          <a class="btn btn-whatsapp btn-sm" href="https://wa.me/2349071049271" target="_blank" style="margin-top: 12px;">
+            <i class="fa-brands fa-whatsapp"></i> Book Now
+          </a>
         </div>
       </div>
     </div>
@@ -1163,7 +1195,7 @@
           </div>
         </article>
 
-        <!-- Project 4: Mikel Marvel Realty (existing) -->
+        <!-- Project 4: Mikel Marvel Realty -->
         <article class="card project-card reveal">
           <img class="project-image" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=85" alt="Mikel Marvel Realty" loading="lazy">
           <div class="project-body">
@@ -1179,7 +1211,7 @@
           </div>
         </article>
 
-        <!-- Project 5: FarmBridge (existing) -->
+        <!-- Project 5: FarmBridge -->
         <article class="card project-card reveal">
           <img class="project-image" src="https://images.unsplash.com/photo-1492496913980-501348b61469?auto=format&fit=crop&w=1200&q=85" alt="FarmBridge" loading="lazy">
           <div class="project-body">
@@ -1194,7 +1226,7 @@
           </div>
         </article>
 
-        <!-- Project 6: Restaurant Concept (existing) -->
+        <!-- Project 6: Restaurant Concept -->
         <article class="card project-card reveal">
           <img class="project-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=85" alt="Restaurant Concept" loading="lazy">
           <div class="project-body">
@@ -1321,17 +1353,17 @@
           <h2 style="margin: 16px 0;">Ready to build something <span class="gradient-text">better?</span></h2>
           <p style="color: var(--text-secondary);">Tell me what you're building, what isn't working, or what you'd like to improve. I'll get back to you within one business day.</p>
           
+          <!-- WhatsApp - Main CTA -->
+          <a class="contact-link" href="https://wa.me/2349071049271" target="_blank" style="border-color: #25D366; background: rgba(37, 211, 102, 0.05);">
+            <i class="fa-brands fa-whatsapp" style="color: #25D366; background: rgba(37, 211, 102, 0.10);"></i>
+            <div><strong>Book Now on WhatsApp</strong><br><span style="color: var(--text-secondary); font-size: 0.85rem;">Click to chat — I reply within minutes</span></div>
+          </a>
+          
           <!-- Email -->
           <div class="contact-link">
             <i class="fa-regular fa-envelope"></i>
             <div><strong>Email</strong><br><span style="color: var(--text-secondary); font-size: 0.85rem;">nosirumichael291@gmail.com</span></div>
           </div>
-          
-          <!-- WhatsApp -->
-          <a class="contact-link" href="https://wa.me/2349071049271" target="_blank">
-            <i class="fa-brands fa-whatsapp" style="color: #25D366;"></i>
-            <div><strong>WhatsApp</strong><br><span style="color: var(--text-secondary); font-size: 0.85rem;">+234 907 104 9271</span></div>
-          </a>
           
           <!-- Upwork -->
           <a class="contact-link" href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank">
@@ -1341,7 +1373,9 @@
           
           <!-- Fiverr -->
           <a class="contact-link" href="https://www.fiverr.com/sellers/michael_fivaa2/edit" target="_blank">
-            <i class="fa-brands fa-fiverr" style="color: #1dbf73;"></i>
+            <svg class="fiverr-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 3.75c4.556 0 8.25 3.694 8.25 8.25s-3.694 8.25-8.25 8.25S3.75 16.556 3.75 12 7.444 3.75 12 3.75zM8.25 8.25v7.5h1.5v-3h2.25v-1.5H9.75V9.75h3V8.25h-4.5zm6 0v7.5h1.5V8.25h-1.5z"/>
+            </svg>
             <div><strong>Fiverr</strong><br><span style="color: var(--text-secondary); font-size: 0.85rem;">View my gigs</span></div>
           </a>
           
@@ -1392,7 +1426,12 @@
             <label for="message">Project Details</label>
             <textarea id="message" name="Message" placeholder="Tell me a little about your project..." required></textarea>
           </div>
-          <button class="btn btn-primary btn-block" type="submit">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+          <button class="btn btn-whatsapp btn-block" type="button" onclick="window.open('https://wa.me/2349071049271','_blank')">
+            <i class="fa-brands fa-whatsapp"></i> Book Now on WhatsApp
+          </button>
+          <p style="text-align: center; color: var(--text-secondary); font-size: 0.75rem; margin-top: 8px;">
+            Prefer email? Use the form above — I'll reply within 24 hours.
+          </p>
         </form>
       </div>
     </div>
@@ -1403,10 +1442,14 @@
   <div class="container footer-row">
     <span class="footer-text">© <span id="year"></span> Nosiru Micheal. Built with purpose.</span>
     <div class="footer-socials">
+      <a href="https://wa.me/2349071049271" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></a>
       <a href="mailto:nosirumichael291@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
-      <a href="https://wa.me/2349071049271" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
       <a href="https://www.upwork.com/freelancers/~0199156fcf0d0d39ca" target="_blank" aria-label="Upwork"><i class="fa-brands fa-upwork"></i></a>
-      <a href="https://www.fiverr.com/sellers/michael_fivaa2/edit" target="_blank" aria-label="Fiverr"><i class="fa-brands fa-fiverr"></i></a>
+      <a href="https://www.fiverr.com/sellers/michael_fivaa2/edit" target="_blank" aria-label="Fiverr">
+        <svg class="fiverr-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 3.75c4.556 0 8.25 3.694 8.25 8.25s-3.694 8.25-8.25 8.25S3.75 16.556 3.75 12 7.444 3.75 12 3.75zM8.25 8.25v7.5h1.5v-3h2.25v-1.5H9.75V9.75h3V8.25h-4.5zm6 0v7.5h1.5V8.25h-1.5z"/>
+        </svg>
+      </a>
       <a href="https://www.peopleperhour.com/freelancer/design/nosiru-micheal-ai-automation-n8n-expert-ai-agents-zxjzymqm" target="_blank" aria-label="PeoplePerHour"><i class="fa-solid fa-clock"></i></a>
       <a href="https://www.threads.com/@michealnosiru" target="_blank" aria-label="Threads"><i class="fa-brands fa-threads"></i></a>
       <a href="https://github.com/marvelmikel5625-hub" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -1414,7 +1457,10 @@
   </div>
 </footer>
 
-<a class="floating-btn" href="#contact" aria-label="Contact"><i class="fa-regular fa-comment"></i> Let's Talk</a>
+<!-- Floating WhatsApp Button -->
+<a class="floating-btn" href="https://wa.me/2349071049271" target="_blank" aria-label="Book now on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i> Let's Talk
+</a>
 
 <script>
   const nav = document.querySelector('.nav-wrap');
